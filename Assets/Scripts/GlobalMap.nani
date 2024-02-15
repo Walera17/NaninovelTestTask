@@ -13,7 +13,8 @@
 
 # Exit
 @back Exit.Dissolve time:3 wait:false
-@stopBgm fade:2
+@stopBgm fade:3
+@showLog name:{"ExitGame"}
 @wait 2
 @quitGame
 @stop

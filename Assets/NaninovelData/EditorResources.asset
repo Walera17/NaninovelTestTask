@@ -147,7 +147,7 @@ MonoBehaviour:
       guid: e3b234b4273b7f64ab3f1d9fe425ed23
     - name: SettingsUI
       pathPrefix: UI
-      guid: 65c37f59e9b266f468dd5381fdc03fc3
+      guid: ca90ba5badc75284097e891216ebbc98
     - name: TipsUI
       pathPrefix: UI
       guid: f5aae572225ee1b4c96d1a17fc5cb073
