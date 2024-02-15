@@ -1,10 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using DTT.MinigameBase;
+using Naninovel;
+using Naninovel.Runtime.Game;
 using System;
-using DTT.MinigameBase;
-using DTT.MinigameBase.Timer;
-using DTT.MinigameBase.UI;
+using UnityEngine;
+using Timer = DTT.MinigameBase.Timer.Timer;
 
 namespace DTT.MinigameMemory
 {
@@ -47,14 +46,14 @@ namespace DTT.MinigameMemory
         /// <summary>
         /// The <see cref="Board"/> used for the minigame.
         /// </summary>
-        [SerializeField]
-        private Board _board;
+        [SerializeField] private Board _board;
 
         /// <summary>
         /// Game timer.
         /// </summary>
-        [SerializeField]
-        private Timer _timer;
+        [SerializeField] private Timer _timer;
+
+        [SerializeField] private string[] dependentScenes;
 
         /// <summary>
         /// Is true when the game is paused.
@@ -100,6 +99,12 @@ namespace DTT.MinigameMemory
             _isPaused = true;
             _timer.Pause();
             Paused?.Invoke(_isPaused);
+        }
+
+        public void ExitGame()
+        {
+            GameService gameService = Engine.GetService<GameService>();
+            gameService.UnLoadGame(dependentScenes);
         }
 
         /// <summary>

@@ -1,0 +1,67 @@
+@hideChars
+@back Loc2.Dissolve time:1 wait:false
+@stopBgm fade:1 wait:false
+@bgm Locat2 fade:1 wait:false loop:true
+@char ElenNovel look:Right pos:25
+@wait 0.5
+@char Jody look:Left pos:75
+
+@goto .RewardReceived if:RewardExist("Sword")
+
+@wait 0.5
+@char ElenNovel.Greeting
+ElenNovel: Привет. Меня зовут {name} и мне приятно с тобой познакомиться. Ты знаешь, где достать меч?
+
+@set pathHelmet=false
+@wait 0.5
+
+@printer Bubble.Right pos:52,68
+@char Jody.Greeting
+Jody: Меня зовут Джоди и мне приятно с тобой познакомиться. Да я покажу тебе, где ты сможешь достать меч. Но сначала ты должен пройти мини игру
+@wait 0.5
+@char Jody.HandsForward
+Jody: Вот место,[set message="Пройти мини игру"] где ты сможешь пройти мини игру
+@hidePrinter
+@choice handler:ButtonArea button:MapButtons/MemoryGameButton pos:750,350 goto:.StartGame
+@showLog name:{message}
+@stop
+
+# StartGame
+@setLabel name:ReturnInGame
+;@wait 0.3
+@stopBgm fade:1
+@startGame name:MiniGame
+@stop
+
+# ReturnInGame
+@wait 0.5
+@bgm Locat2 wait:false loop:true
+@printer Bubble.Right pos:52,68
+@wait 0.5
+@char Jody.HappyHand
+Jody: Молодец. [set message="Прошел мини игру"] [showLog name:{message}] Ты прошел мини игру.
+@char Jody.HandsForward
+Jody: Вот место, [set message="Получить меч"] где ты сможешь достать меч[wait 1.5]
+@hidePrinter
+@choice handler:ButtonArea button:MapButtons/SwordButton pos:750,100 goto:Location3
+@showLog name:{message}
+@stop
+
+# ReturnWithReward
+@back Loc2 time:1
+@wait 0.5
+ElenNovel: Странно. Никого нет. Куда-то Джуди ушла. [set message="Перейти к Софи"] [showLog name:{message}] Пойду тогда к Софи
+@hidePrinter
+@goto Location1.FinishDialog
+@stop
+
+# RewardReceived
+@if rewardJody
+@char Jody.Greeting
+Jody: Привет {name} - Ты хороший человек. С тобой приятно вести дела.[wait 1.2][skipInput]
+@else
+@char Jody.Dismissing
+Jody: {name} - Ты подлец. Не хочу иметь с тобой никаких дел.[wait 5][skipInput]
+@endIf
+@showLog name:{"EnableGlobalMap"}
+@stop

@@ -1,7 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
+using System.Collections;
+using DTT.Minigame___Memory.Runtime;
 using UnityEngine;
-using System;
 using UnityEngine.UI;
 
 namespace DTT.MinigameMemory 
@@ -61,7 +61,9 @@ namespace DTT.MinigameMemory
         /// <summary>
         /// True if the front of the card is showing.
         /// </summary>
-        private bool _isShowing = false;
+        private bool _isShowing;
+
+        CardAudioEvent _cardAudioEvent;
 
         /// <summary>
         /// Sets the sprites for the card.
@@ -70,6 +72,8 @@ namespace DTT.MinigameMemory
         /// <param name="backSprite">The sprite shown on the back of the card.</param>
         public void Init(Sprite backSprite)
         {
+            _cardAudioEvent = new CardAudioEvent();
+
             _backSprite = backSprite;
 
             _cardButton.image.sprite = _backSprite;
@@ -86,7 +90,7 @@ namespace DTT.MinigameMemory
         /// </summary>
         public void FlipCard(float speed)
         {
-            this.StartCoroutine(Flip(Quaternion.Euler(0, (_isShowing ? 0 : 180), 0), _isShowing ? _backSprite : _frontSprite, speed));
+            StartCoroutine(Flip(Quaternion.Euler(0, (_isShowing ? 0 : 180), 0), _isShowing ? _backSprite : _frontSprite, speed));
             _isShowing = !_isShowing;
         }
 
@@ -96,10 +100,16 @@ namespace DTT.MinigameMemory
         /// <param name="otherCard">The card to compair with.</param>
         public void CompairToCard(Card otherCard)
         {
-            if (this._frontSprite == otherCard._frontSprite)
+            if (_frontSprite == otherCard._frontSprite)
+            {
                 GoodMatch?.Invoke(this, otherCard);
+                _cardAudioEvent.GoodMatch();
+            }
             else
+            {
                 BadMatch?.Invoke(this, otherCard);
+                _cardAudioEvent.BadMatch();
+            }
         }
 
         /// <summary>
@@ -111,12 +121,12 @@ namespace DTT.MinigameMemory
         /// <summary>
         /// Disables the content of the card.
         /// </summary>
-        public void DisableCard(float speed) => this.StartCoroutine(FadeOutCard(speed));
+        public void DisableCard(float speed) => StartCoroutine(FadeOutCard(speed));
 
         /// <summary>
         /// Enables the content of the card.
         /// </summary>
-        public void EnableCard(float speed) => this.StartCoroutine(FadeInCard(speed));
+        public void EnableCard(float speed) => StartCoroutine(FadeInCard(speed));
 
         /// <summary>
         /// Adding listener to the card button.
@@ -137,6 +147,7 @@ namespace DTT.MinigameMemory
                 return;
 
             Clicked?.Invoke(this);
+            _cardAudioEvent.ClickCard();
         }
 
         /// <summary>

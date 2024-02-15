@@ -127,9 +127,6 @@ MonoBehaviour:
     - name: ConfirmationUI
       pathPrefix: UI
       guid: 88d03f19bcbff914ba33a7c9895e2d7c
-    - name: ContinueInputUI
-      pathPrefix: UI
-      guid: 1add671f8348e8443bcc56290e82fc5e
     - name: ExternalScriptsUI
       pathPrefix: UI
       guid: 671ceb4f549ddf046913d7debf113469
@@ -156,19 +153,99 @@ MonoBehaviour:
       guid: f5aae572225ee1b4c96d1a17fc5cb073
     - name: TitleUI
       pathPrefix: UI
-      guid: 4b121aa1be1b7e04480b452c595ff17a
+      guid: dc4525d84184b914a98f54b5866282bb
     - name: VariableInputUI
       pathPrefix: UI
-      guid: bb95f484e341dcd4391a572f22b7d067
+      guid: 0c3f0190f261e8b40844d8af460570fb
     - name: PauseUI
       pathPrefix: UI
       guid: 480f5db62ea305c46b89a86496d2a0c9
     - name: ToastUI
       pathPrefix: UI
       guid: dd85ce99288c2f8488447fa511b1c0d6
+    - name: QuestUI
+      pathPrefix: UI
+      guid: 9a75ce6ea943c0045b2b48ac6384e0bb
   - Id: Scripts
-    Resources: []
+    Resources:
+    - name: Title
+      pathPrefix: Scripts
+      guid: e40350776f68d594a89de98350546387
+    - name: Game
+      pathPrefix: Scripts
+      guid: 82481846e35deef4688ffbd5508e08e1
+    - name: Location1
+      pathPrefix: Scripts
+      guid: c2fae65375c5ea74686d391604be59ca
+    - name: Location2
+      pathPrefix: Scripts
+      guid: fe06bf0910f1b0e499446a056c914432
+    - name: Location3
+      pathPrefix: Scripts
+      guid: 030b45b5c1271be4b94ea64c1c8e8db7
+    - name: GlobalMap
+      pathPrefix: Scripts
+      guid: 12d505581df3c124eab32bbf0694f25d
   - Id: CharacterAvatars
     Resources: []
   - Id: Movies
     Resources: []
+  - Id: Backgrounds/b591db67-482b-4957-b6fa-12611e8116b0
+    Resources:
+    - name: Menu
+      pathPrefix: Backgrounds/MainBackground
+      guid: d5639d404c7ac4d42ba34b1915158285
+    - name: Game
+      pathPrefix: Backgrounds/MainBackground
+      guid: cc1f17f2ef6039e40bc1831e1d804619
+    - name: Loc1
+      pathPrefix: Backgrounds/MainBackground
+      guid: 6595de525e9d42f489feba004ee5398b
+    - name: Loc2
+      pathPrefix: Backgrounds/MainBackground
+      guid: 14c45a063a38ce240a4db979763167a1
+    - name: Loc3
+      pathPrefix: Backgrounds/MainBackground
+      guid: 5714a83b05c4ce24ba0cd199fe43ae2e
+    - name: Exit
+      pathPrefix: Backgrounds/MainBackground
+      guid: 57bb26390e095f3458daf62c1c5e6b70
+  - Id: Characters/415db1b4-8175-4db0-84dd-bb08572511e4
+    Resources:
+    - name: Elen
+      pathPrefix: Characters
+      guid: c0e02d33e2801364ba68a4b29474a7f7
+  - Id: Audio
+    Resources:
+    - name: Menu
+      pathPrefix: Audio
+      guid: 7fdfa78b067808c49b4cddda558e592d
+    - name: Game
+      pathPrefix: Audio
+      guid: b56e5bdbfaa27c64bbbf84bf4293b3a6
+    - name: Locat1
+      pathPrefix: Audio
+      guid: 466a21c6e24020845af5ed1b7b5a4e19
+    - name: Locat2
+      pathPrefix: Audio
+      guid: 071b73edd7c39f540ad21ea0326340b9
+  - Id: Characters/d77c24e2-11d9-424f-8283-399dccfa6231
+    Resources:
+    - name: ElenNovel
+      pathPrefix: Characters
+      guid: ad5300e43dc49fa47a9901b940f4dc6f
+  - Id: Characters/db7ecbdc-ee0e-492a-950d-8d7caa9b0300
+    Resources:
+    - name: Jody
+      pathPrefix: Characters
+      guid: 65201a9f169ecc04099740642f51a7d9
+  - Id: Characters/3dacd51b-fc12-41d8-9235-c1168d7e2d40
+    Resources:
+    - name: Sophie
+      pathPrefix: Characters
+      guid: 667ebb6da016b574495fc9aee1cc5f67
+  - Id: Characters/2dc54831-d3fa-4c3c-980e-646247b714bc
+    Resources:
+    - name: SwordReward
+      pathPrefix: Characters
+      guid: 3f5d67036816dc04a8193c35d5d43cda

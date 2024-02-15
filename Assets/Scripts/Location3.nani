@@ -1,0 +1,13 @@
+@hideChars
+@back Loc3.Crossfade time:1 wait:false
+@char ElenNovel look:Right pos:25
+@char SwordReward.Default pos:75,80
+@char SwordReward.Select if:!RewardExist("Sword")
+@stop
+
+# Reward
+@printer Dialogue
+Поздравляем. [set message="Приз получен"][showLog name:{message}] Приз получен
+@hide SwordReward
+@goto Location2.ReturnWithReward
+@stop

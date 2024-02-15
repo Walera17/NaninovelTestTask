@@ -1,0 +1,27 @@
+@back Game.RadialBlur time:1 wait:false
+@bgm Game fade:1
+
+@input name summary:"Выберете имя игрока"
+@stop
+
+@set PlayerName=name
+@char ElenNovel look:Right pos:25
+
+@printer Dialogue
+@wait 0.75
+ElenNovel: Привет {name} - Я твой аватар, и я рад познакомиться с тобой[set message="Здесь будет отображаться прогресс квестов"]
+
+@showUI QuestUI
+@showLog name:{message}
+
+; @showLog name:{"EnableGlobalMap"}
+; @stop
+
+@set rewardSophie=false
+@set rewardJody=false
+
+@wait 0.75
+@hidePrinter
+@goto Location1 
+
+@stop
