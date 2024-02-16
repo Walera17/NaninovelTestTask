@@ -44,6 +44,7 @@
           &lt;string&gt;Loc1&lt;/string&gt;
           &lt;string&gt;Loc2&lt;/string&gt;
           &lt;string&gt;Loc3&lt;/string&gt;
+          &lt;string&gt;Exit&lt;/string&gt;
         &lt;/Appearances&gt;
       &lt;/Actor&gt;
       &lt;Actor&gt;
@@ -501,6 +502,10 @@
       &lt;/Resource&gt;
       &lt;Resource&gt;
         &lt;Path&gt;Loc3&lt;/Path&gt;
+        &lt;Type&gt;Backgrounds/MainBackground&lt;/Type&gt;
+      &lt;/Resource&gt;
+      &lt;Resource&gt;
+        &lt;Path&gt;Exit&lt;/Path&gt;
         &lt;Type&gt;Backgrounds/MainBackground&lt;/Type&gt;
       &lt;/Resource&gt;
       &lt;Resource&gt;

@@ -2,13 +2,13 @@
 @back Loc1.Dissolve time:1 wait:false
 @stopBgm fade:1 wait:false
 @bgm Locat1 fade:1 wait:false loop:true
-@char ElenNovel look:Right pos:25
+@char ElenNovel look:Right pos:25,1
 @wait 0.5
 @char Sophie look:Left pos:75
 
 @goto .RewardReceived if:RewardExist("Sword")
 
-@wait 0.5
+@wait 1.5
 @char ElenNovel.Greeting
 ElenNovel: Привет. Меня зовут {name} и мне приятно с тобой познакомиться
 
@@ -31,14 +31,15 @@ ElenNovel: Хорошо. [set message="Добыть меч для Софи"] Я 
 @back Loc1 time:1 wait:false
 @stopBgm fade:1 wait:false
 @bgm Locat1 fade:1 wait:false loop:true
-@char ElenNovel look:Right pos:25
+@char ElenNovel look:Right pos:25,1
 @wait 0.5
 @char Jody look:Left pos:50
 @wait 0.5
 @char Sophie look:Left pos:75
-@wait 0.5
 
-ElenNovel: Привет. Я долго вас искал.[set message="Кому передать награду"] Мне удалось достать меч.
+@wait 1.5
+@char ElenNovel.Greeting
+ElenNovel: Привет. Я долго вас искал.[set message="Кому передать награду"]Мне удалось достать меч.
 @showLog name:{message}
 @char Sophie.Greeting
 Sophie: Привет {name} - Я хочу получить меч, который заказывала. Я хорошо заплачу.

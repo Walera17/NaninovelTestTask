@@ -2,13 +2,13 @@
 @back Loc2.Dissolve time:1 wait:false
 @stopBgm fade:1 wait:false
 @bgm Locat2 fade:1 wait:false loop:true
-@char ElenNovel look:Right pos:25
+@char ElenNovel look:Right pos:25,1
 @wait 0.5
 @char Jody look:Left pos:75
 
 @goto .RewardReceived if:RewardExist("Sword")
 
-@wait 0.5
+@wait 1.5
 @char ElenNovel.Greeting
 ElenNovel: Привет. Меня зовут {name} и мне приятно с тобой познакомиться. Ты знаешь, где достать меч?
 
@@ -34,7 +34,6 @@ Jody: Вот место,[set message="Пройти мини игру"] где т
 @stop
 
 # ReturnInGame
-@wait 0.5
 @bgm Locat2 wait:false loop:true
 @printer Bubble.Right pos:52,68
 @wait 0.5
