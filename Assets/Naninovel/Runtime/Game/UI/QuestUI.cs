@@ -10,6 +10,7 @@ namespace Naninovel.Runtime.Game.UI
 {
     public class QuestUI : CustomUI
     {
+        [SerializeField] private GameObject log;
         [SerializeField] private TMP_Text logText;
         [SerializeField] private GameObject globalMap;
         [SerializeField] private GameObject exitGame;
@@ -22,6 +23,7 @@ namespace Naninovel.Runtime.Game.UI
             if (string.IsNullOrEmpty(text))
             {
                 logText.text = String.Empty;
+                log.SetActive(false);
                 return;
             }
 

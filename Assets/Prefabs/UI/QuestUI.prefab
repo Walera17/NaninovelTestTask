@@ -34,11 +34,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 7554065179340327818}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.85, y: 0}
-  m_AnchorMax: {x: 1, y: 0.9}
+  m_AnchorMin: {x: 0.75, y: 0}
+  m_AnchorMax: {x: 0.99, y: 0.95}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 1}
 --- !u!222 &7984493950530534542
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -592,8 +592,8 @@ RectTransform:
   - {fileID: 2925934337400226808}
   m_Father: {fileID: 6306036015961478113}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.3, y: 0.95}
-  m_AnchorMax: {x: 0.7, y: 1}
+  m_AnchorMin: {x: 0, y: 0.85}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 1, y: 1}
@@ -694,6 +694,7 @@ MonoBehaviour:
   allowedSamplers: []
   modalUI: 0
   fontChangeConfiguration: []
+  log: {fileID: 6384538186127694276}
   logText: {fileID: 3933890632780495243}
   globalMap: {fileID: 778705637772015577}
   exitGame: {fileID: 1605913584399185595}
@@ -762,7 +763,7 @@ GameObject:
   - component: {fileID: 3371167434289571343}
   - component: {fileID: 693933101007937127}
   m_Layer: 5
-  m_Name: Background
+  m_Name: LogBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -783,8 +784,8 @@ RectTransform:
   - {fileID: 6412615277603134493}
   m_Father: {fileID: 7554065179340327818}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.85, y: 1}
+  m_AnchorMin: {x: 0.25, y: 0.6}
+  m_AnchorMax: {x: 0.75, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
