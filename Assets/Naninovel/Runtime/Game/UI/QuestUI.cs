@@ -64,6 +64,8 @@ namespace Naninovel.Runtime.Game.UI
 
         private void SetupTextBlock(string text)
         {
+            if(!log.activeSelf) log.SetActive(true);
+
             counter++;
             string showText = counter + ". " + text;
             questLogs.Add(showText);
