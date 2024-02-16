@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 114928903171779670}
   - component: {fileID: 114304314121696590}
   - component: {fileID: 114935234543976500}
+  - component: {fileID: 8698998000642170988}
   m_Layer: 5
   m_Name: Location1
   m_TagString: Untagged
@@ -174,6 +175,36 @@ MonoBehaviour:
   onSummaryTextChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8698998000642170988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035633866503374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18a93ec42ebe3044abd36de19cc3a880, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  category: MyCustomDocument
+  key: MyCustomLocation1
+  defaultValue: Location 1
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3593401162755268643}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4541861633627378693
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,8 +352,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a93ec42ebe3044abd36de19cc3a880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  category: DefaultUI
-  key: GlobalMap.Location1
+  category: MyCustomDocument
+  key: MyCustomLocation1
   defaultValue: Location 1
   onValueChanged:
     m_PersistentCalls:

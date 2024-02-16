@@ -10,17 +10,17 @@
 
 @wait 1.5
 @char ElenNovel.Greeting
-ElenNovel: Привет. Меня зовут {name} и мне приятно с тобой познакомиться. Ты знаешь, где достать меч?
+ElenNovel: Hello. My name is {name} and I am pleased to meet you. Do you know where to get the sword?
 
 @set pathHelmet=false
 @wait 0.5
 
 @printer Bubble.Right pos:52,68
 @char Jody.Greeting
-Jody: Меня зовут Джоди и мне приятно с тобой познакомиться. Да я покажу тебе, где ты сможешь достать меч. Но сначала ты должен пройти мини игру
+Jody: My name is Jody and I am pleased to meet you. Yes, I will show you where you can get a sword. But first you have to go a mini game.
 @wait 0.5
 @char Jody.HandsForward
-Jody: Вот место,[set message="Пройти мини игру"] где ты сможешь пройти мини игру
+Jody: Here is a place,[set message="Go a mini game"] where can you go a mini game
 @hidePrinter
 @choice handler:ButtonArea button:MapButtons/MemoryGameButton pos:750,350 goto:.StartGame
 @showLog name:{message}
@@ -38,9 +38,9 @@ Jody: Вот место,[set message="Пройти мини игру"] где т
 @printer Bubble.Right pos:52,68
 @wait 0.5
 @char Jody.HappyHand
-Jody: Молодец. [set message="Прошел мини игру"] [showLog name:{message}] Ты прошел мини игру.
+Jody: Well done. [set message="Passed a mini game"] [showLog name:{message}] You went through a mini game.
 @char Jody.HandsForward
-Jody: Вот место, [set message="Получить меч"] где ты сможешь достать меч[wait 1.5]
+Jody: Here is a place [set message="Get a sword"] where can you get a sword[wait 1.5]
 @hidePrinter
 @choice handler:ButtonArea button:MapButtons/SwordButton pos:750,100 goto:Location3
 @showLog name:{message}
@@ -49,7 +49,7 @@ Jody: Вот место, [set message="Получить меч"] где ты с�
 # ReturnWithReward
 @back Loc2 time:1
 @wait 0.5
-ElenNovel: Странно. Никого нет. Куда-то Джуди ушла. [set message="Перейти к Софи"] [showLog name:{message}] Пойду тогда к Софи
+ElenNovel: Strange. Nobody here. Jody went somewhere. [set message="Go to Sophie"] [showLog name:{message}] I'll go to Sophie then
 @hidePrinter
 @goto Location1.FinishDialog
 @stop
@@ -57,10 +57,10 @@ ElenNovel: Странно. Никого нет. Куда-то Джуди ушл�
 # RewardReceived
 @if rewardJody
 @char Jody.Greeting
-Jody: Привет {name} - Ты хороший человек. С тобой приятно вести дела.[wait 1.2][skipInput]
+Jody: Hello {name} - You are a good person. It's nice to do business with you.[wait 1.2][skipInput]
 @else
 @char Jody.Dismissing
-Jody: {name} - Ты подлец. Не хочу иметь с тобой никаких дел.[wait 5][skipInput]
+Jody: {name} - You are a scoundrel. I do not want to have any business with you.[wait 5][skipInput]
 @endIf
 @showLog name:{"EnableGlobalMap"}
 @stop

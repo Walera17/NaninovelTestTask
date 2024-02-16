@@ -1,0 +1,13 @@
+; English <en> to Russian <ru> localization document for `GlobalMap` naninovel script
+
+# 7d1e5f6f
+; @choice handler:ButtonArea button:MapButtons/Location1 pos:750,350 goto:Location1
+
+# ce400604
+; @choice handler:ButtonArea button:MapButtons/Location2 pos:750,100 goto:Location2
+
+# fa179aaa
+; @choice handler:ButtonArea button:MapButtons/Location3 pos:750,-150 goto:Location3
+
+# 9f7929bd
+; @choice handler:ButtonArea button:MapButtons/ExitGame pos:750,-400 goto:.Exit

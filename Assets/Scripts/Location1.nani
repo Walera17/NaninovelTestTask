@@ -10,17 +10,17 @@
 
 @wait 1.5
 @char ElenNovel.Greeting
-ElenNovel: Привет. Меня зовут {name} и мне приятно с тобой познакомиться
+ElenNovel: Hello. My name is {name} and I am pleased to meet you.
 
 @printer Bubble.Right pos:52,68
 @char Sophie.Greeting
-Sophie: Меня зовут Софи и мне приятно с тобой познакомиться. Мне нужен меч. Я хорошо заплачу. Добудешь?
+Sophie: My name is Sophie and I am pleased to meet you. I need a sword. I will pay well. Will you get?
 
 @wait 0.5
 @printer Dialogue
 @char ElenNovel.Thinking
 @wait 2.5
-ElenNovel: Хорошо. [set message="Добыть меч для Софи"] Я достану меч и принесу его тебе. 
+ElenNovel: Good. [set message="Get a sword for Sophie"] I will take out a sword and bring it to you. 
 @showLog name:{message}
 
 @wait 1.0
@@ -39,22 +39,22 @@ ElenNovel: Хорошо. [set message="Добыть меч для Софи"] Я 
 
 @wait 1.5
 @char ElenNovel.Greeting
-ElenNovel: Привет. Я долго вас искал.[set message="Кому передать награду"]Мне удалось достать меч.
+ElenNovel: Hello. I have been looking for you for a long time.[set message="To whom to transfer the award"]I managed to get a sword.
 @showLog name:{message}
 @char Sophie.Greeting
-Sophie: Привет {name} - Я хочу получить меч, который заказывала. Я хорошо заплачу.
+Sophie: Hello {name} - I want to get a sword that I ordered. I will pay well.
 @char Jody.Greeting
-Jody: Привет {name} - Я тоже хочу получить меч. Я хорошо заплачу.
+Jody: Hello {name} - I also want to get a sword. I will pay well.
 @hidePrinter
 @showLog name:{""}
 
 # Choice
 ;@wait 3.2
 @showUI time:1
-@choice "Оставить предметы себе" goto:.Self
-@choice "Отдать только Софи" goto:.OnlySophie
-@choice "Отдать только Джуди" goto:.OnlyJody
-@choice "Выход из блока выбора" goto:.ExitChoise
+@choice "Leave objects to yourself" goto:.Self
+@choice "Give only Sophie" goto:.OnlySophie
+@choice "Give only Jody" goto:.OnlyJody
+@choice "Exit from the choice block" goto:.ExitChoice
 
 @stop
 
@@ -88,7 +88,7 @@ Jody: Привет {name} - Я тоже хочу получить меч. Я х�
 @wait 3
 @goto .Choice
 
-# ExitChoise
+# ExitChoice
 @showLog name:{"EnableGlobalMap"}
 @hide Jody
 @stop
@@ -96,10 +96,10 @@ Jody: Привет {name} - Я тоже хочу получить меч. Я х�
 # RewardReceived
 @if rewardSophie
 @char Sophie..Greeting
-Sophie: Привет {name} - Ты хороший человек. С тобой приятно вести дела.[wait 1.2][skipInput]
+Sophie: Hello {name} - You are a good person. It's nice to do business with you.[wait 1.2][skipInput]
 @else
 @char Sophie.Dismissing
-Sophie: {name} - Ты подлец. Не хочу иметь с тобой никаких дел.[wait 5][skipInput]
+Sophie: {name} - You are a scoundrel. I do not want to have any business with you.[wait 5][skipInput]
 @endIf
 @showLog name:{"EnableGlobalMap"}
 @stop

@@ -2,9 +2,6 @@
 
 Elen: Элен
 ElenNovel: {PlayerName}
-Helmet: Helmet
-HelmetGame: HelmetGame
 Jody: Джоди
 Sophie: Софи
-Sword: Sword
-SwordGame: SwordGame
+SwordReward: SwordReward

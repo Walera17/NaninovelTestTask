@@ -1,7 +1,7 @@
 @back Game.RadialBlur time:1 wait:false
 @bgm Game fade:1
 
-@input name summary:"Выберете имя игрока"
+@input name summary:"Choose a Player Name"
 @stop
 
 @set PlayerName=name
@@ -9,7 +9,7 @@
 
 @printer Dialogue
 @wait 0.75
-ElenNovel: Привет {name} - Я твой аватар, и я рад познакомиться с тобой[set message="Здесь будет отображаться прогресс квестов"]
+ElenNovel: Hello {name} - I am your avatar and I am pleased to meet you[set message="The progress of quests will be displayed here"]
 
 @showUI QuestUI
 @showLog name:{message}

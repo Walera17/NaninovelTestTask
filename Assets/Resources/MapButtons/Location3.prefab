@@ -324,8 +324,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a93ec42ebe3044abd36de19cc3a880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  category: DefaultUI
-  key: GlobalMap.Location3
+  category: MyCustomDocument
+  key: MyCustomLocation3
   defaultValue: Location 3
   onValueChanged:
     m_PersistentCalls:

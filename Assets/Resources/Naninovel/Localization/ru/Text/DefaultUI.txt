@@ -39,6 +39,7 @@ Naninovel.UI.GameSettingsSkipModeDropdown.ReadOnly: Прочитанное
 Naninovel.UI.GameStateSlot.EmptySlotLabel: Пусто
 Naninovel.UI.SaveLoadMenu.DeleteSaveSlotMessage: Вы уверены, что хотите удалить слот сохранения?
 Naninovel.UI.SaveLoadMenu.OverwriteSaveSlotMessage: Вы уверены, что хотите перезаписать слот сохранения?
+QuestUI.LabelExit: Игра  Окончена
 SaveLoadMenu.Tab.Load: ЗАГРУЗКА
 SaveLoadMenu.Tab.QuickLoad: Б. ЗАГРУЗКА
 SaveLoadMenu.Tab.Save: СОХРАНИТЬ
@@ -61,11 +62,11 @@ SettingsMenu.VolumeEffects: Эффекты:
 SettingsMenu.VolumeMaster: Общий:
 SettingsMenu.VolumeMusic: Музыка:
 SettingsMenu.VolumeVoice: Голос:
-TitleMenu.CGGallery: CG GALLERY
+TitleMenu.CGGallery: CG Галерея
 TitleMenu.Continue: ПРОДОЛЖИТЬ
 TitleMenu.Exit: ВЫХОД
-TitleMenu.ExternalScripts: EXTERNAL SCRIPTS
+TitleMenu.ExternalScripts: Внешние сценарии
 TitleMenu.NewGame: СТАРТ  ТЕСТОВОГО  ЗАДАНИЯ
 TitleMenu.Settings: НАСТРОЙКИ
-TitleMenu.Tips: TIPS
+TitleMenu.Tips: СОВЕТЫ
 VariableInput.Submit: ВВОД

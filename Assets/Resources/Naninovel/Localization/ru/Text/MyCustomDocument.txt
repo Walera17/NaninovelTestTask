@@ -1,0 +1,5 @@
+; English <en> to Russian <ru> localization document for `MyCustomDocument` managed text document
+
+MyCustomLocation1: Локация 1
+MyCustomLocation2: Локация 2
+MyCustomLocation3: Локация 3

@@ -7,7 +7,7 @@
 
 # Reward
 @printer Dialogue
-Поздравляем. [set message="Приз получен"][showLog name:{message}] Приз получен
+Congratulations. [set message="The prize was received"][showLog name:{message}] The prize was received
 @hide SwordReward
 @goto Location2.ReturnWithReward
 @stop
