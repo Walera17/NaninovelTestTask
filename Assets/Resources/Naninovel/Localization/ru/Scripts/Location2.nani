@@ -12,9 +12,6 @@ Jody: Меня зовут Джоди и мне приятно с тобой по
 ; Jody: Here is a place, where can you go a mini game
 Jody: Вот место, где можно пройти мини игру
 
-# a832cf5e
-; @choice handler:ButtonArea button:MapButtons/MemoryGameButton pos:750,350 goto:.StartGame
-
 # f7b43026
 ; Jody: Well done.[showLog name:{T_Message4}] You went through a mini game.
 Jody: Молодец.[showLog name:{T_Message4}] Ты прошел мини-игру.
@@ -22,9 +19,6 @@ Jody: Молодец.[showLog name:{T_Message4}] Ты прошел мини-иг
 # 40364fa1
 ; Jody: Here is a place where can you get a sword[wait 1.5]
 Jody: Вот место, где можно достать меч[wait 1.5]
-
-# 4e990f2e
-; @choice handler:ButtonArea button:MapButtons/SwordButton pos:750,100 goto:Location3
 
 # 3700de74
 ; ElenNovel: Strange. Nobody here. Jody went somewhere.[showLog name:{T_Message7}] I'll go to Sophie then
