@@ -8,13 +8,13 @@ ElenNovel: Привет. Меня зовут {name} и мне приятно с 
 ; Sophie: My name is Sophie and I am pleased to meet you. I need a sword. I will pay well. Will you get?
 Sophie: Меня зовут Софи и мне приятно с тобой познакомиться. Мне нужен меч. Я хорошо заплачу. Добудешь?
 
-# e34de5f3
-; ElenNovel: Good. [set message="Get a sword for Sophie"] I will take out a sword and bring it to you. 
-ElenNovel: Хорошо. [set message="Добыть меч для Софи"] Я достану меч и принесу его тебе.
+# b82a6bc4
+; ElenNovel: Good. I will take out a sword and bring it to you. 
+ElenNovel: Хорошо. Я достану меч и принесу его тебе.
 
-# 8d4f4dfc
-; ElenNovel: Hello. I have been looking for you for a long time.[set message="To whom to transfer the award"]I managed to get a sword.
-ElenNovel: Привет. Я долго вас искал.[set message="Кому передать награду"]Мне удалось достать меч.
+# 6927cc0a
+; ElenNovel: Hello. I have been looking for you for a long time. I managed to get a sword.
+ElenNovel: Привет. Я долго искал вас. Мне удалось получить меч.
 
 # 20afd0d6
 ; Sophie: Hello {name} - I want to get a sword that I ordered. I will pay well.

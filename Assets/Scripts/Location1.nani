@@ -20,8 +20,8 @@ Sophie: My name is Sophie and I am pleased to meet you. I need a sword. I will p
 @printer Dialogue
 @char ElenNovel.Thinking
 @wait 2.5
-ElenNovel: Good. [set message="Get a sword for Sophie"] I will take out a sword and bring it to you. 
-@showLog name:{message}
+ElenNovel: Good. I will take out a sword and bring it to you. 
+@showLog name:{T_Message2}
 
 @wait 1.0
 @hidePrinter
@@ -39,8 +39,8 @@ ElenNovel: Good. [set message="Get a sword for Sophie"] I will take out a sword 
 
 @wait 1.5
 @char ElenNovel.Greeting
-ElenNovel: Hello. I have been looking for you for a long time.[set message="To whom to transfer the award"]I managed to get a sword.
-@showLog name:{message}
+ElenNovel: Hello. I have been looking for you for a long time. I managed to get a sword.
+@showLog name:{T_Message8}
 @char Sophie.Greeting
 Sophie: Hello {name} - I want to get a sword that I ordered. I will pay well.
 @char Jody.Greeting

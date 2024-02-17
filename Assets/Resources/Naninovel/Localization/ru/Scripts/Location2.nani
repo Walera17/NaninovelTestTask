@@ -8,27 +8,27 @@ ElenNovel: Привет. Меня зовут {name} и мне приятно с 
 ; Jody: My name is Jody and I am pleased to meet you. Yes, I will show you where you can get a sword. But first you have to go a mini game.
 Jody: Меня зовут Джоди и мне приятно с тобой познакомиться. Да я покажу тебе, где ты сможешь достать меч. Но сначала ты должен пройти мини игру
 
-# 389d83e4
-; Jody: Here is a place,[set message="Go a mini game"] where can you go a mini game
-Jody: Вот место,[set message="Пройти мини игру"] где ты сможешь пройти мини игру
+# 62adefb9
+; Jody: Here is a place, where can you go a mini game
+Jody: Вот место, где можно пройти мини игру
 
 # a832cf5e
 ; @choice handler:ButtonArea button:MapButtons/MemoryGameButton pos:750,350 goto:.StartGame
 
-# 77cb670a
-; Jody: Well done. [set message="Passed a mini game"] [showLog name:{message}] You went through a mini game.
-Jody: Молодец. [set message="Прошел мини игру"] [showLog name:{message}] Ты прошел мини игру.
+# f7b43026
+; Jody: Well done.[showLog name:{T_Message4}] You went through a mini game.
+Jody: Молодец.[showLog name:{T_Message4}] Ты прошел мини-игру.
 
-# f99d660b
-; Jody: Here is a place [set message="Get a sword"] where can you get a sword[wait 1.5]
-Jody: Вот место, [set message="Получить меч"] где ты сможешь достать меч[wait 1.5]
+# 40364fa1
+; Jody: Here is a place where can you get a sword[wait 1.5]
+Jody: Вот место, где можно достать меч[wait 1.5]
 
 # 4e990f2e
 ; @choice handler:ButtonArea button:MapButtons/SwordButton pos:750,100 goto:Location3
 
-# 33f0ec63
-; ElenNovel: Strange. Nobody here. Jody went somewhere. [set message="Go to Sophie"] [showLog name:{message}] I'll go to Sophie then
-ElenNovel: Странно. Никого нет. Куда-то Джоди ушла. [set message="Перейти к Софи"] [showLog name:{message}] Пойду тогда к Софи
+# 3700de74
+; ElenNovel: Strange. Nobody here. Jody went somewhere.[showLog name:{T_Message7}] I'll go to Sophie then
+ElenNovel: Странно. Здесь никого нет. Джоди куда-то пошла.[showLog name:{T_Message7}] Тогда я пойду к Софи
 
 # dfce80bd
 ; Jody: Hello {name} - You are a good person. It's nice to do business with you.[wait 1.2][skipInput]

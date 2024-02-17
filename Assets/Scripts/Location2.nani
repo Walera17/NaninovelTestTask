@@ -20,10 +20,10 @@ ElenNovel: Hello. My name is {name} and I am pleased to meet you. Do you know wh
 Jody: My name is Jody and I am pleased to meet you. Yes, I will show you where you can get a sword. But first you have to go a mini game.
 @wait 0.5
 @char Jody.HandsForward
-Jody: Here is a place,[set message="Go a mini game"] where can you go a mini game
+Jody: Here is a place, where can you go a mini game
 @hidePrinter
 @choice handler:ButtonArea button:MapButtons/MemoryGameButton pos:750,350 goto:.StartGame
-@showLog name:{message}
+@showLog name:{T_Message3}
 @stop
 
 # StartGame
@@ -38,18 +38,18 @@ Jody: Here is a place,[set message="Go a mini game"] where can you go a mini gam
 @printer Bubble.Right pos:52,68
 @wait 0.5
 @char Jody.HappyHand
-Jody: Well done. [set message="Passed a mini game"] [showLog name:{message}] You went through a mini game.
+Jody: Well done.[showLog name:{T_Message4}] You went through a mini game.
 @char Jody.HandsForward
-Jody: Here is a place [set message="Get a sword"] where can you get a sword[wait 1.5]
+Jody: Here is a place where can you get a sword[wait 1.5]
 @hidePrinter
 @choice handler:ButtonArea button:MapButtons/SwordButton pos:750,100 goto:Location3
-@showLog name:{message}
+@showLog name:{T_Message5}
 @stop
 
 # ReturnWithReward
 @back Loc2 time:1
 @wait 0.5
-ElenNovel: Strange. Nobody here. Jody went somewhere. [set message="Go to Sophie"] [showLog name:{message}] I'll go to Sophie then
+ElenNovel: Strange. Nobody here. Jody went somewhere.[showLog name:{T_Message7}] I'll go to Sophie then
 @hidePrinter
 @goto Location1.FinishDialog
 @stop

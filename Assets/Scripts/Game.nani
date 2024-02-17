@@ -9,10 +9,10 @@
 
 @printer Dialogue
 @wait 0.75
-ElenNovel: Hello {name} - I am your avatar and I am pleased to meet you[set message="The progress of quests will be displayed here"]
+ElenNovel: Hello {name} - I am your avatar and I am pleased to meet you
 
 @showUI QuestUI
-@showLog name:{message}
+@showLog name:{T_Message1}
 
 ; @showLog name:{"EnableGlobalMap"}
 ; @stop

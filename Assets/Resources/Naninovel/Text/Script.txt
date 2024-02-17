@@ -1,0 +1,8 @@
+T_Message1: The progress of quests will be displayed here
+T_Message2: Get a sword for Sophie
+T_Message3: Go a mini game
+T_Message4: Passed a mini game
+T_Message5: Get a sword
+T_Message6: The prize was received
+T_Message7: Go to Sophie
+T_Message8: To whom to transfer the award

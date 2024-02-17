@@ -7,7 +7,7 @@
 
 # Reward
 @printer Dialogue
-Congratulations. [set message="The prize was received"][showLog name:{message}] The prize was received
+Congratulations. [showLog name:{T_Message6}] The prize was received
 @hide SwordReward
 @goto Location2.ReturnWithReward
 @stop

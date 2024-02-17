@@ -1,5 +1,5 @@
 ; English <en> to Russian <ru> localization document for `Location3` naninovel script
 
-# 57f0a020
-; Congratulations. [set message="The prize was received"][showLog name:{message}] The prize was received
-Поздравляем. [set message="Приз получен"][showLog name:{message}] Приз получен
+# d7a3a91
+; Congratulations. [showLog name:{T_Message6}] The prize was received
+Поздравляю. [showLog name:{T_Message6}] Приз получен
