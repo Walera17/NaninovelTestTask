@@ -194,10 +194,10 @@ MonoBehaviour:
     Resources:
     - name: Menu
       pathPrefix: Backgrounds/MainBackground
-      guid: d5639d404c7ac4d42ba34b1915158285
+      guid: 572852d9172a44a42bfe092a478244a5
     - name: Game
       pathPrefix: Backgrounds/MainBackground
-      guid: cc1f17f2ef6039e40bc1831e1d804619
+      guid: e807835f60fe3034695167a013728317
     - name: Loc1
       pathPrefix: Backgrounds/MainBackground
       guid: 6595de525e9d42f489feba004ee5398b
@@ -210,6 +210,9 @@ MonoBehaviour:
     - name: Exit
       pathPrefix: Backgrounds/MainBackground
       guid: 57bb26390e095f3458daf62c1c5e6b70
+    - name: Map
+      pathPrefix: Backgrounds/MainBackground
+      guid: 0a14e130457a82e4abc6ab5ad416388a
   - Id: Characters/415db1b4-8175-4db0-84dd-bb08572511e4
     Resources:
     - name: Elen
