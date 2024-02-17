@@ -1,13 +1,13 @@
 @hideChars
 @showLog name:{"DisableGlobalMap"}
 
-@back Game.RadialBlur time:1
+@back Map.RadialBlur time:1
 @hidePrinter
 
-@choice handler:ButtonArea button:MapButtons/Location1 pos:750,350 goto:Location1
-@choice handler:ButtonArea button:MapButtons/Location2 pos:750,100 goto:Location2
-@choice handler:ButtonArea button:MapButtons/Location3 pos:750,-150 goto:Location3
-@choice handler:ButtonArea button:MapButtons/ExitGame pos:750,-400 goto:.Exit
+@choice handler:ButtonArea button:MapButtons/Location1 pos:-750,-400 goto:Location1
+@choice handler:ButtonArea button:MapButtons/Location2 pos:0,350 goto:Location2
+@choice handler:ButtonArea button:MapButtons/Location3 pos:750,200 goto:Location3
+@choice handler:ButtonArea button:MapButtons/ExitGame pos:850,-430 goto:.Exit
 
 @stop
 

@@ -14,7 +14,7 @@ Jody: Вот место, где можно пройти мини игру
 
 # f7b43026
 ; Jody: Well done.[showLog name:{T_Message4}] You went through a mini game.
-Jody: Молодец.[showLog name:{T_Message4}] Ты прошел мини-игру.
+Jody: Молодец.[showLog name:{T_Message4}] Ты прошел мини игру.
 
 # 40364fa1
 ; Jody: Here is a place where can you get a sword[wait 1.5]
