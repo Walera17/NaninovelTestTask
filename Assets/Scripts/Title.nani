@@ -1,5 +1,7 @@
 @back Menu
 @bgm Menu
+@showLog name:{"DisableGlobalMap"}
+
 @char Elen pos:25,2
 @wait 1.5
 
