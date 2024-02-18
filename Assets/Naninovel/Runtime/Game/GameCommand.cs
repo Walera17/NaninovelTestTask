@@ -10,7 +10,6 @@ namespace Naninovel.Runtime.Game
         public override UniTask ExecuteAsync(AsyncToken asyncToken = default)
         {
             GameService gameService = Engine.GetService<GameService>();
-
             gameService.LoadGame(Name.Value);
             return default;
         }
@@ -24,10 +23,11 @@ namespace Naninovel.Runtime.Game
         public override UniTask ExecuteAsync(AsyncToken asyncToken = default)
         {
             GameService gameService = Engine.GetService<GameService>();
-            gameService.label = Name.Value;
+            gameService.SetLabel(Name.Value);
             return default;
         }
     }
+
     [CommandAlias("addRewards")]
     public class AddRewards : Command
     {
@@ -36,7 +36,7 @@ namespace Naninovel.Runtime.Game
         public override UniTask ExecuteAsync(AsyncToken asyncToken = default)
         {
             GameService gameService = Engine.GetService<GameService>();
-            gameService.rewardItems.Add(Name.Value);
+            gameService.AddReward(Name.Value);
             return default;
         }
     }
@@ -63,8 +63,20 @@ namespace Naninovel.Runtime.Game
         public override UniTask ExecuteAsync(AsyncToken asyncToken = default)
         {
             GameService gameService = Engine.GetService<GameService>();
-
             gameService.QuitGame();
+            return default;
+        }
+    }
+
+    [CommandAlias("resetGame")]
+    public class ResetGame : Command
+    {
+        public StringParameter Name;
+
+        public override UniTask ExecuteAsync(AsyncToken asyncToken = default)
+        {
+            GameService gameService = Engine.GetService<GameService>();
+            gameService.ResetGame();
             return default;
         }
     }

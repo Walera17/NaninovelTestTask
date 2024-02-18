@@ -1,5 +1,7 @@
 @back Menu
-@bgm Menu
+@bgm Menu loop:true
+
+@resetGame
 @showLog name:{"DisableGlobalMap"}
 
 @char Elen pos:25,2

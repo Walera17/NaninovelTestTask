@@ -7,8 +7,8 @@ namespace Naninovel.Runtime.Game
     [InitializeAtRuntime]
     public class GameService : IEngineService
     {
-        public readonly List<string> rewardItems = new();
-        public string label;
+        private readonly List<string> rewardItems = new();
+        private string label;
         private string currentLevelName;
 
         public UniTask InitializeServiceAsync()
@@ -66,8 +66,17 @@ namespace Naninovel.Runtime.Game
 
         public void ResetService()
         {
-            rewardItems.Clear();
         }
+
+        public void AddReward(string nameReward)
+        {
+            if (!rewardItems.Contains(nameReward))
+                rewardItems.Add(nameReward);
+        }
+
+        public bool ContainsReward(string itemId) => rewardItems.Contains(itemId);
+        public void SetLabel(string nameValue) => label = nameValue;
+        public void ResetGame() => rewardItems.Clear();
 
         public void DestroyService()
         {

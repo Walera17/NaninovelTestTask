@@ -1,10 +1,8 @@
 using Naninovel.UI;
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Naninovel.Runtime.Game.UI
 {
@@ -15,8 +13,6 @@ namespace Naninovel.Runtime.Game.UI
         [SerializeField] private GameObject globalMap;
         [SerializeField] private GameObject exitGame;
         [SerializeField] private TMP_Text exitGameText;
-        private readonly List<string> questLogs = new();
-        private int counter;
 
         public void ShowLog(string text)
         {
@@ -64,12 +60,9 @@ namespace Naninovel.Runtime.Game.UI
 
         private void SetupTextBlock(string text)
         {
-            if(!log.activeSelf) log.SetActive(true);
+            if (!log.activeSelf) log.SetActive(true);
 
-            counter++;
-            string showText = counter + ". " + text;
-            questLogs.Add(showText);
-            logText.text = showText;
+            logText.text = text;
         }
 
         private void GlobalMapEnableDisable(bool value)

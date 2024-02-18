@@ -1,5 +1,5 @@
 @back Game.RadialBlur time:1 wait:false
-@bgm Game fade:1
+@bgm Game fade:1 loop:true
 
 @input name summary:"Choose a Player Name"
 @stop

@@ -6,7 +6,7 @@ namespace Naninovel.Runtime.Game
         public static bool RewardExist(string itemId)
         {
             var gameService = Engine.GetService<GameService>();
-            return gameService.rewardItems.Contains(itemId);
+            return gameService.ContainsReward(itemId);
         }
     }
 }
